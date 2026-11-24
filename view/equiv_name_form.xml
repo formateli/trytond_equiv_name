@@ -5,6 +5,6 @@ the full copyright notices and license terms. -->
 <form>
     <label name="origin"/>
     <field name="origin"/>
-    <label name="equivalence"/>
-    <field name="equivalence"/>
+    <label name="equivalent"/>
+    <field name="equivalent"/>
 </form>

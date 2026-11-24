@@ -21,8 +21,8 @@ the full copyright notices and license terms. -->
 
         <menuitem name="Equivalent Name" id="menu_equiv_name"/>
         <record model="ir.ui.menu-res.group" id="menu_equiv_name_group_equiv_name">
-            <field name="menu" ref="menu_rrhh"/>
-            <field name="group" ref="group_rrhh"/>
+            <field name="menu" ref="menu_equiv_name"/>
+            <field name="group" ref="group_equiv_name"/>
         </record>
 
         <record model="ir.ui.view" id="equiv_name_view_form">
@@ -42,7 +42,7 @@ the full copyright notices and license terms. -->
         </record>
         <record model="ir.action.act_window.view" id="act_equiv_name_form_view1">
             <field name="sequence" eval="10"/>
-            <field name="view" ref="instruction_view_tree"/>
+            <field name="view" ref="equiv_name_view_tree"/>
             <field name="act_window" ref="act_equiv_name_form"/>
         </record>
         <record model="ir.action.act_window.view" id="act_equiv_name_form_view2">
@@ -61,7 +61,7 @@ the full copyright notices and license terms. -->
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
-        <record model="ir.model.access" id="access_equiv_name_group_equiv_name">
+        <record model="ir.model.access" id="access_equiv_name_group_equiv_name_admin">
             <field name="model">equiv_name.equiv</field>
             <field name="group" ref="group_equiv_name_admin"/>
             <field name="perm_read" eval="True"/>

@@ -4,5 +4,5 @@ The COPYRIGHT file at the top level of this repository contains
 the full copyright notices and license terms. -->
 <tree>
     <field name="origin"/>
-    <field name="equivalence"/>
+    <field name="equivalent"/>
 </tree>

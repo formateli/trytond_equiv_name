@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!-- This file is part of Equivalent Name module.
+The COPYRIGHT file at the top level of this repository contains
+the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="res.group" id="group_equiv_name">
+            <field name="name">Equivalent Name</field>
+        </record>
+        <record model="res.group" id="group_equiv_name_admin">
+            <field name="name">Equivalent Name Administration</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_equiv_name">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_equiv_name"/>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_equiv_name_admin">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_equiv_name_admin"/>
+        </record>
+
+        <menuitem name="Equivalent Name" id="menu_equiv_name"/>
+        <record model="ir.ui.menu-res.group" id="menu_equiv_name_group_equiv_name">
+            <field name="menu" ref="menu_rrhh"/>
+            <field name="group" ref="group_rrhh"/>
+        </record>
+
+        <record model="ir.ui.view" id="equiv_name_view_form">
+            <field name="model">equiv_name.equiv</field>
+            <field name="type">form</field>
+            <field name="name">equiv_name_form</field>
+        </record>
+        <record model="ir.ui.view" id="equiv_name_view_tree">
+            <field name="model">equiv_name.equiv</field>
+            <field name="type">tree</field>
+            <field name="name">equiv_name_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_equiv_name_form">
+            <field name="name">Equivalent Name</field>
+            <field name="res_model">equiv_name.equiv</field>
+            <field name="search_value"></field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_equiv_name_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="instruction_view_tree"/>
+            <field name="act_window" ref="act_equiv_name_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_equiv_name_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="equiv_name_view_form"/>
+            <field name="act_window" ref="act_equiv_name_form"/>
+        </record>
+        <menuitem name="Equivalent Name" id="menu_equiv_name_items"
+            sequence="5" action="act_equiv_name_form"
+            parent="menu_equiv_name"/>
+
+        <record model="ir.model.access" id="access_equiv_name">
+            <field name="model">equiv_name.equiv</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_equiv_name_group_equiv_name">
+            <field name="model">equiv_name.equiv</field>
+            <field name="group" ref="group_equiv_name_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+    </data>
+</tryton>

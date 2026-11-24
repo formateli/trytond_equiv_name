@@ -1,7 +1,7 @@
 Tryton Equivalent Name module
 #############################
 
-Register equivalent names for diferents models names.
+Register equivalent values for diferents models name field values.
 
 It is useful in cases where the names of external sources are different from those registered in the models, allowing them to be easily searched.
 

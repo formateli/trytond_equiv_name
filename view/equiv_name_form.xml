@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- This file is part of Equivalent Name module.
+The COPYRIGHT file at the top level of this repository contains
+the full copyright notices and license terms. -->
+<form>
+    <label name="origin"/>
+    <field name="origin"/>
+    <label name="equivalence"/>
+    <field name="equivalence"/>
+</form>
